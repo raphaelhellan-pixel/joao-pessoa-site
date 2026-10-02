@@ -4,103 +4,59 @@
 @media(max-width:760px){.header-inner{height:72px;width:calc(100% - 40px)}.brand-symbol{font-size:31px}.brand-caption{font-size:9px}.menu-toggle{display:flex;flex-direction:column;justify-content:center;gap:5px;align-items:center;width:44px;height:44px;border:1px solid var(--line);background:#fff;cursor:pointer}.menu-toggle span{display:block;width:19px;height:2px;background:var(--ink)}.nav{display:none;position:absolute;left:0;right:0;top:72px;background:#fff;padding:17px 24px 25px;box-shadow:0 14px 20px rgba(8,46,53,.12);flex-direction:column;align-items:stretch;gap:6px}.nav.is-open{display:flex}.nav a{padding:10px 0}.nav a:after{bottom:6px}.container{width:calc(100% - 40px)}.hero{min-height:610px}.hero-shade{background:linear-gradient(90deg,rgba(5,39,48,.86),rgba(5,39,48,.36)),linear-gradient(0deg,rgba(5,39,48,.6),transparent)}.hero-content{padding-block:75px}.hero h1{font-size:clamp(62px,14vw,94px)}.hero-text{font-size:17px}.hero-index{display:none}.intro-section{grid-template-columns:1fr;gap:25px;padding-block:65px 45px}.intro-section>p{font-size:17px}.routes-section{grid-template-columns:1fr;padding-bottom:75px}.route-card{height:395px}.page-heading{padding-bottom:40px}.page-heading .eyebrow{margin-top:55px}.page-heading h1{font-size:clamp(50px,11vw,78px)}.page-lead{font-size:17px}.place{grid-template-columns:1fr;gap:25px;padding:40px 0}.place:nth-child(even) .place-image{order:0}.place-copy h2{margin:12px 0 15px}.place-copy p{font-size:16px}.next-page{align-items:start;flex-direction:column;padding-block:55px 70px}.footer-inner{flex-wrap:wrap;padding-block:34px;gap:12px 20px}.footer-inner p{flex:1}.back-top{width:100%;margin-left:0}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
 
-
-/* EXPERIÊNCIAS */
-.experiences-section{
-  padding:20px 0 115px;
-  background:var(--sand);
-}
-.experiences-heading{
-  display:grid;
-  grid-template-columns:1.4fr 1fr;
-  gap:90px;
-  align-items:end;
-  padding:95px 0 48px;
-  border-top:1px solid var(--line);
-}
-.experiences-heading h2{
-  font-size:clamp(42px,5vw,68px);
-  letter-spacing:-.045em;
-  margin:16px 0 0;
-}
-.experiences-heading h2 em{color:var(--coral)}
-.experiences-heading>p{
-  color:var(--muted);
-  font-size:18px;
-  max-width:430px;
-  margin:0 0 5px;
-}
-.experience-grid{
-  display:grid;
-  grid-template-columns:1.15fr .85fr .85fr;
-  gap:18px;
-}
-.experience-card{
-  min-height:390px;
-  position:relative;
-  overflow:hidden;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-  padding:27px;
-  color:#fff;
-  background:var(--ink-deep);
-  isolation:isolate;
-}
-.experience-card:before{
-  content:"";
-  position:absolute;
-  inset:0;
-  z-index:-2;
-  background-position:center;
-  background-size:cover;
-  transition:transform .55s ease;
-}
-.experience-card:after{
-  content:"";
-  position:absolute;
-  inset:0;
-  z-index:-1;
-  background:linear-gradient(0deg,rgba(4,35,41,.92),rgba(4,35,41,.12) 78%);
-}
-.experience-card:hover:before{transform:scale(1.055)}
-.experience-sunset:before{
-  background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/P%C3%B4r_do_sol_no_Jacar%C3%A9_-_Cabedelo%2C_Para%C3%ADba.jpg?width=1200');
-}
-.experience-flavors:before{
-  background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Bolo_de_rolo.jpg?width=1000');
-}
-.experience-culture:before{
-  background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Centro_Hist%C3%B3rico_de_Jo%C3%A3o_Pessoa.jpg?width=1000');
-}
-.experience-number{
-  font-size:11px;
-  font-weight:700;
-  letter-spacing:.18em;
-}
-.experience-card-content{margin-top:auto}
-.experience-card h3{
-  font-family:'Playfair Display',Georgia,serif;
-  font-size:clamp(30px,3vw,44px);
-  line-height:1.05;
-  margin:12px 0 12px;
-}
-.experience-card p{
-  max-width:340px;
-  margin:0;
-  color:#edf5ef;
-  font-size:15px;
-  line-height:1.65;
+/* ETAPA 3 — Melhoria visual do menu de navegação */
+.nav {
+  background: #f7f3ea;
+  padding: 6px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  gap: 4px;
 }
 
-@media(max-width:760px){
-  .experiences-section{padding-bottom:75px}
-  .experiences-heading{
-    grid-template-columns:1fr;
-    gap:25px;
-    padding:65px 0 35px;
+.nav a {
+  padding: 9px 16px;
+  border-radius: 999px;
+  transition: background .25s ease, color .25s ease, transform .2s ease;
+}
+
+.nav a:after {
+  display: none;
+}
+
+.nav a:hover {
+  background: #fff;
+  color: var(--sea);
+  transform: translateY(-1px);
+}
+
+.nav a[aria-current="page"] {
+  background: var(--ink);
+  color: #fff;
+}
+
+.nav a[aria-current="page"]:hover {
+  background: var(--ink-deep);
+  color: #fff;
+}
+
+@media(max-width:760px) {
+  .nav {
+    border: 0;
+    border-radius: 0;
+    padding: 17px 24px 25px;
+    gap: 6px;
   }
-  .experiences-heading>p{font-size:17px}
-  .experience-grid{grid-template-columns:1fr;gap:16px}
-  .experience-card{min-height:330px}
+
+  .nav a {
+    padding: 10px 0;
+    border-radius: 0;
+  }
+
+  .nav a:hover,
+  .nav a[aria-current="page"] {
+    padding-left: 12px;
+    background: transparent;
+    color: var(--sea);
+    transform: none;
+  }
 }
