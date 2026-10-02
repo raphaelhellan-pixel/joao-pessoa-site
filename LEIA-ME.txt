@@ -1,0 +1,10 @@
+SITE: JOÃO PESSOA
+
+Abra index.html no navegador. Os arquivos HTML, CSS e JavaScript ficam separados e ligados por caminhos relativos.
+
+Páginas: index.html (início), praias.html (três praias), pontos-turisticos.html (três atrações).
+Estilos: assets/style.css.
+Interações: assets/script.js (menu para celular, retorno ao topo e links de crédito fotográfico).
+
+As fotografias são carregadas do Wikimedia Commons: é preciso ter conexão à internet para visualizá-las. Ao clicar no crédito da imagem, é possível consultar autoria e licença na página original.
+Fotos de capa e dos atalhos: Wikimedia Commons, com os respectivos nomes de arquivo nos endereços presentes no CSS.
